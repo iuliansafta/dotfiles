@@ -147,3 +147,16 @@ function phpunitw {
     ./vendor/bin/phpunit $1
     onchange 'src/**/*.php' 'tests/**/*.php' -- ./vendor/bin/phpunit $1
 }
+
+function wip() {
+    git add . && git commit -m "WIP $*"
+}
+
+function aws_staging() {
+    ssh-keygen -R "all-ecs-staging.digitaljob.org"
+    ssh -i /Users/iuliansafta/dev/digital/aws-keys/digitaljob-staging.pem ec2-user@all-ecs-staging.digitaljob.org
+}
+function aws_jenkins() {
+    #ssh-keygen -R "jenkins.digitaljob.org"
+    ssh -i /Users/iuliansafta/dev/digital/aws-keys/api-digitaljob-git.pem ubuntu@jenkins.digitaljob.org
+}

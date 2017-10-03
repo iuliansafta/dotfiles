@@ -130,7 +130,7 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
-# Enable f	ull keyboard access for all controls
+# Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
@@ -150,12 +150,12 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
 defaults write NSGlobalDomain AppleLanguages -array "en"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `systemsetup -listtimezones` for other values
-systemsetup -settimezone "Europe/Brussels" > /dev/null
+systemsetup -settimezone "Europe/Bucharest" > /dev/null
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false

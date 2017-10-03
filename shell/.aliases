@@ -59,3 +59,35 @@ alias scrape="scrapeUrl"
 
 alias npmnpm="npm config set registry https://registry.npmjs.org"
 alias npmspatie="npm config set registry https://npm.spatie.be"
+
+
+alias dev="cd ~/dev"
+alias djapi="cd ~/dev/digital/api"
+
+# DOCKER
+alias apistart="dc up -d nginx mysql redis"
+alias apistop="dc down"
+alias drm="docker rmi $(docker images -q)"
+
+# COMUNITY
+alias ll='ls -FGlAhp'
+alias la='ls -lAh'
+alias g='git'
+alias gs='git status'
+alias d='docker'
+alias dc='docker-compose'
+alias dm='docker-machine'
+
+alias df="df -h"
+alias diskusage="df"
+alias finder='open -a 'Finder' .'
+
+alias editaliases='open -a "Visual Studio Code" ~/doftfiles'
+alias zshrc='open -a "Visual Studio Code" ~/.zshrc'
+alias aliases="cat ~/dotfiles/shell/.aliases"
+
+alias publicip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias localip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias nah="git reset --hard && git clean -df"
